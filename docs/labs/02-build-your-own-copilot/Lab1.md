@@ -228,7 +228,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    | -------------------- | -------------------- | 
    | Email                | <inject key="AzureAdUserEmail"></inject>  | 
    | Username             | Odluser<inject key="DeploymentID" enableCopy="false"/>              |
-   | Password             | Pa55w.rd1234         |
+   | Password             | <inject key="AzureAdUserPassword"></inject>         |
    | Stay signed in for 30 days | Select the checkbox |
    |||
 
