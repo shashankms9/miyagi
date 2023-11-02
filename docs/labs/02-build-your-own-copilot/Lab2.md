@@ -5,9 +5,34 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 ### Task 1: Build Docker Images for the Miyagi Application
 
 1. Open Docker Application from the Lab VM desktop by double-clicking on it.
+   ![](./Media/docker1.png)
+   
 1. On **Docker Subscription Service Agreement** window, click **Accept**.
-1. If **This site is trying to open Postman.** pop up's click on **Open**.
+   ![](./Media/docker2.png)
+
+1. On **Welcome to Docker Desktop** window, click on **sign up**
+   ![](./Media/docker3.png)
+
+1. On **Create your account** window, specify the following details:
+
+   | **Settings**         | **Values**           | 
+   | -------------------- | -------------------- | 
+   | Email                | <inject key="AzureAdUserEmail"></inject>  | 
+   | Username             | Odluser<inject key="DeploymentID" enableCopy="false"/>              |
+   | Password             | <inject key="AzureAdUserPassword"></inject>         |
+   | Send me occasional product updates and announcements. | Select the checkbox |
+   |||
+
+   ![](./Media/docker5.png)
+
+1. On Sign in window, enter your email <inject key="AzureAdUserEmail"></inject> and click on **Continue**.
+
+1. On Enter your Password window, provide <inject key="AzureAdUserPassword"></inject> and click on **Continue**
+
+1. If **This site is trying to open docker desktop.** pop up's click on **Open**.
+
 1. Navigate to miyagi/ui/ right - click on ui/typescript in cascading menu, select **Open in intergate Terminal**.
+
 1. Run following command to build a Docker image
 
     ```
