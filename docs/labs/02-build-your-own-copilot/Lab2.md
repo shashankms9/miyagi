@@ -116,35 +116,12 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
 
 1. Navigate to miyagi/ui/ right - click on ui/typescript in cascading menu, select **Open in intergate Terminal**.
 
-1. Run following command to login.
-
-    **Note**: Please replace <ACRname> and [uname] with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for [password] navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of recources and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
-
-   ```
-    docker login <ACRname>.azurecr.io -u [uname] -p [password]
-   ```
-
-1. Run following command to add tag
-
-   **Note**: Please replace **miyagiacr[did]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
-
-   ```
-    docker tag miyagi-ui:latest miyagiacr{did].azurecr.io/miyagi-ui:latest
-   ```
-1. Run the following command to push image to container registery
-
-   **Note**: Please replace **miyagiacr[did]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
-
-   ```
-    docker push miyagiacr[did].azurecr.io/miyagi-ui:latest
-
-   ```
 
 1. Navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
 
 1. Run following command to login.
 
-   **Note**: Please replace <ACRname> and [uname] with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for [password] navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of recources and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
+   **Note**: Please replace **<ACRname>** and **[uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for [password] navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of recources and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
 
     ```
     docker login <ACRname>.azurecr.io -u [uname] -p [password]
@@ -152,17 +129,46 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
 
 1. Run following command to add tag.
 
-   **Note**: Please replace **miyagiacr[did]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
+   **Note**: Please replace **miyagiacr[DID]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
 
    ```
-    docker tag miyagi-recommendation:latest miyagiacr{did].azurecr.io/miyagi-recommendation:latest
+    docker tag miyagi-recommendation:latest miyagiacr[DID].azurecr.io/miyagi-recommendation:latest
    ```
 1. Run the following command to push image to container registery
 
-   **Note**: Please replace **miyagiacr[did]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
+   **Note**: Please replace **miyagiacr[DID]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
 
    ```
-    docker push miyagiacr[did].azurecr.io/miyagi-recommendation:latest
+    docker push miyagiacr[DID].azurecr.io/miyagi-recommendation:latest
 
    ```
+
+1. Navigate to miyagi/ui/ right - click on ui/typescript in cascading menu, select **Open in intergate Terminal**.
+
+
+1. Run following command to login.
+
+    **Note**: Please replace **<ACRname>** and **[uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for [password] navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of recources and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
+
+   ```
+    docker login <ACRname>.azurecr.io -u [uname] -p [password]
+   ```
+
+1. Run following command to add tag
+
+   **Note**: Please replace **miyagiacr[DID]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
+
+   ```
+    docker tag miyagi-ui:latest miyagiacr[DID].azurecr.io/miyagi-ui:latest
+   ```
+1. Run the following command to push image to container registery
+
+   **Note**: Please replace **miyagiacr[DID]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
+
+   ```
+    docker push miyagiacr[DID].azurecr.io/miyagi-ui:latest
+
+   ```
+
+
 
