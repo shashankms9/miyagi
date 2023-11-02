@@ -35,7 +35,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
          ![](./Media/image-rg-1.png)
 
-      - On **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, from the Overview (1) tab select the OpenAIService-<inject key="DeploymentID" enableCopy="false"/> (2).
+      - On **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, from the Overview (1) tab select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
         ![](./Media/image-rg-2.png)
 
@@ -56,7 +56,7 @@ In this lab, you'll setup and configure Miyagi app locally.
       
       -  Navigate back to deployment page
 
-      - On the Deployments blade of Azure AI Studio, click on text-embedding-ada-002 model name **(1)** and Copy full deployment name of text-embedding-ada-002 model **(2)** and enter copied deployment for 
+      - On the Deployments blade of Azure AI Studio, click on **text-embedding-ada-002 model name (1)** and Copy full deployment name of **text-embedding-ada-002 model(2)** and enter copied deployment for 
         **"embeddingDeploymentOrModelId"** in appsettings.json by navigating back to visual studio code.   
 
          ![](./Media/image-rg-10.png)
@@ -77,17 +77,17 @@ In this lab, you'll setup and configure Miyagi app locally.
 
 1. To obtain the values for  "azureCognitiveSearchEndpoint", "azureCognitiveSearchApiKey", follow below steps:
    
-   1. Navigate back to miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> resource group.
+   1. Navigate back to **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group.
 
-   1. On the miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> page, select acs-<inject key="DeploymentID" enableCopy="false"/> from resources list.
+   1. On the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** page, select **acs-<inject key="DeploymentID" enableCopy="false"/>** from resources list.
    ![](./Media/image-rg-12.png)
  
-   1. On acs-<inject key="DeploymentID" enableCopy="false"/> blade copy the URL and get back to Visual studio code and paste URL to **azureCognitiveSearchEndpoint**
+   1. On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade copy the URL and get back to Visual studio code and paste URL to **azureCognitiveSearchEndpoint**
    ![](./Media/image-rg-13.png)
 
       >**Note**: Please record **URL** and paste in notepad you need this values in further tasks.
 
-   1. On acs-<inject key="DeploymentID" enableCopy="false"/> blade, under **Settings** section, copy **Primary admin Key** values and paste to **azureCognitiveSearchApiKey** 
+   1. On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Settings** section, copy **Primary admin Key** values and paste to **azureCognitiveSearchApiKey** 
       in visual studio code
    
       ![](./Media/image-rg-14.png)
@@ -96,15 +96,15 @@ In this lab, you'll setup and configure Miyagi app locally.
 
 1. To obtain the values for "cosmosDbUri" and "cosmosDbName," please follow the steps below:
 
-   1. Navigative back to resource group miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> resource group page, select cosmos-<inject key="DeploymentID" enableCopy="false"/> from resources list.
+   1. Navigative back to resource group **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group page, select **cosmos-<inject key="DeploymentID" enableCopy="false"/>** from resources list.
       ![](./Media/image-rg-15.png)
 
-   1. On cosmos-<inject key="DeploymentID" enableCopy="false"/> copy the URL 
+   1. On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** copy the URL 
       ![](./Media/image-rg-16.png)
 
       >**Note**: Please record **URL** in notepad you need this values in further tasks.
       
-   1. Get back to visual studio and paste URL to **CosmosDBURI** and for **cosmosDbName** replace "miyagi** with cosmos-<inject key="DeploymentID" enableCopy="false"/>
+   1. Get back to visual studio and paste URL to **CosmosDBURI** and for **cosmosDbName** replace "miyagi** with **cosmos-<inject key="DeploymentID" enableCopy="false"/>**
 
         >**Note**: Please record **Name** values in notepad you need this values in further tasks.
 
@@ -124,7 +124,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
  ### Task 2: Setup .NET secrets
 
-1. Navigate to miyagi/services/recommendation-service/dotnet, right click on dotnet and in cascading menu, select **Open in intergate Terminal**.
+1. Navigate to **miyagi/services/recommendation-service/dotnet**, right click on dotnet and in cascading menu, select **Open in intergate Terminal**.
 1. Run the following command to set the secrets for the recommendation service. You will need to provide the values for the variables below.
    
      ```
@@ -155,7 +155,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
 Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step by step details of how the Recommendation Service is implemented. Pay special attention to how RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
 
-1. In Visual Studio Code navigate to miyagi/sandbox/usecases/rag/dotnet folder and select **Getting-started.ipynb**
+1. In Visual Studio Code navigate to **miyagi/sandbox/usecases/rag/dotnet** folder and select **Getting-started.ipynb**
    ![](./Media/image-rg-23.png)
 
 1. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
@@ -167,7 +167,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    
 ### Task 4: Run miyagi frontend locally
 
-1. Open a new terminal: by navigating  miyagi/ui/typescript and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
+1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
 
    ![](./Media/image-rg-25.png)
 
@@ -192,7 +192,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    
 ### Task 5: Run recommendation service locally
 
-1. Open a new terminal: by navigating miyagi/services/recommendation-service/dotnet and right-click on in cascade select **Open in intergate Terminal**.
+1. Open a new terminal: by navigating **miyagi/services/recommendation-service/dotnet** and right-click on in cascading menu select **Open in intergate Terminal**.
 
     ![](./Media/image-rg-26.png)
 
@@ -237,7 +237,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    ![](./Media/post4.png)
 
-1. In **Drop anywhere to import** window, select **files** and navigate to C:\LabFiles\miyagi\services\recommendation-service\dotnet\setup.
+1. In **Drop anywhere to import** window, select **files** and navigate to **C:\LabFiles\miyagi\services\recommendation-service\dotnet\setup**.
 
     ![](./Media/post5.png)
 
