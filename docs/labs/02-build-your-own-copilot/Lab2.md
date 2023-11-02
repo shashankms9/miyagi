@@ -21,11 +21,14 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
    ```
    docker run -t miyagi-ui -p 8001:3000
    ```
+
+### Task 2: Build Docker Images for the Recommendation service
+
 1. Navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
 1. Run following command to build a Docker image
 
    ```
-   Docker build . -t miyagi-recommemdation      
+   docker build . -t miyagi-recommemdation      
    ```
 1. Run foolowing command to show the newly created image
    ```
