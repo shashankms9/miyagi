@@ -4,7 +4,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
 ### Task 1: Build Docker Images for the Miyagi Application
 
-1. Open Docker Application from the Lab VM desktop by double-clicking on it open.
+1. Open Docker Application from the Lab VM desktop by double-clicking on it.
 1. On **Docker Subscription Service Agreement** window, click **Accept**.
 1. If **This site is trying to open Postman.** pop up's click on **Open**.
 1. Navigate to miyagi/ui/ right - click on ui/typescript in cascading menu, select **Open in intergate Terminal**.
