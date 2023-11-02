@@ -88,6 +88,27 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
    ```
    docker run -t miyagi-recommemdation -p 8002:80
    ```
+1. Navigate back to **Docker desktop**, from left pane select **Images**.
+   ![](./Media/docker7.png)
+
+1. On **Images** blade, notice **miyagi-recommemdation(1)** image is created, select **run(2)** icon .
+   ![](./Media/docker13.png)
+
+1. On **Run a new containe** window select the dropdown arrow.
+
+   ![](./Media/docker14-1.png)
+
+1. On **Run a new containe**, under **Ports** for **Host Port** enter **8001** and click on **Run**.
+
+    ![](./Media/docker14.png)
+
+1. On       click on **8001:3000** url link
+   ![](./Media/docker15.png)
+   
+1. You should be able to see the application running locally
+   
+   ![](./Media/docker16.png)
+
 1. Navigate to miyagi/ui/ right - click on ui/typescript in cascading menu, select **Open in intergate Terminal**.
 
 1. Run following command
