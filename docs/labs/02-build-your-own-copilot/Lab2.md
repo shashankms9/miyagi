@@ -114,9 +114,6 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
 In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr. 
 
-1. Navigate to miyagi/ui/ right - click on ui/typescript in cascading menu, select **Open in intergate Terminal**.
-
-
 1. Navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
 
 1. Run following command to login.
