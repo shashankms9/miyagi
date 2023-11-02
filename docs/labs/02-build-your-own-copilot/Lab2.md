@@ -32,7 +32,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
 1. On Enter your Password window, provide <inject key="AzureAdUserPassword"></inject> and click on **Continue**
 
-    ![](./Media/docker6.png)
+    ![](./Media/docker(6).png)
 
 1. If **This site is trying to open docker desktop.** pop up's click on **Open**.
 
