@@ -19,7 +19,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
    | **Settings**         | **Values**           | 
    | -------------------- | -------------------- | 
    | Email                | <inject key="AzureAdUserEmail"></inject>  | 
-   | Username             | Odluser<inject key="DeploymentID" enableCopy="false"/>              |
+   | Username             | Odluser<inject key="DeploymentID" enableCopy="false"/>   |
    | Password             | <inject key="AzureAdUserPassword"></inject>         |
    | Send me occasional product updates and announcements. | Select the checkbox |
    |||
@@ -65,7 +65,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
     ![](./Media/docker10.png)
 
-1. On       click on **8001:3000** url link
+1. Click on **8001:3000** url link
    ![](./Media/docker11.png)
    
 1. You should be able to see the application running locally
@@ -102,7 +102,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
     ![](./Media/docker14.png)
 
-1. On       click on **8001:3000** url link
+1. Click on **8001:3000** url link
    ![](./Media/docker15.png)
    
 1. You should be able to see the application running locally
@@ -115,13 +115,15 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr
 
 1. Navigate to miyagi/ui/ right - click on ui/typescript in cascading menu, select **Open in intergate Terminal**.
 
-1. Run following command
-   **Note**: Please replace <ACRname> and [uname] with miyagiacr<inject key="DeploymentID" enableCopy="false"/> for [password] navigate
-    ```
+1. Run following command to login.
+
+    **Note**: Please replace <ACRname> and [uname] with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for [password] navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of recources and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
+
+   ```
     docker login <ACRname>.azurecr.io -u [uname] -p [password]
    ```
 
-1. Run following command
+1. Run following command to add tag
 
    **Note**: Please replace miyagiacr[did] with miyagiacr<inject key="DeploymentID" enableCopy="false"/>
 
@@ -139,14 +141,15 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr
 
 1. Navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
 
-1. Run following command.
-   **Note**: Please replace <ACRname> and [uname] with miyagiacr<inject key="DeploymentID" enableCopy="false"/> for [password] navigate
+1. Run following command to login.
+
+   **Note**: Please replace <ACRname> and [uname] with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for [password] navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of recources and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
 
     ```
     docker login <ACRname>.azurecr.io -u [uname] -p [password]
     ```
 
-1. Run following command
+1. Run following command to add tag.
 
    **Note**: Please replace miyagi[did] with miyagi<inject key="DeploymentID" enableCopy="false"/>
 
