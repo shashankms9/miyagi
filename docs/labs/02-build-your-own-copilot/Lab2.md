@@ -116,8 +116,14 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr
 1. Navigate to miyagi/ui/ right - click on ui/typescript in cascading menu, select **Open in intergate Terminal**.
 
 1. Run following command
+   **Note**: Please replace <ACRname> and [uname] with miyagiacr<inject key="DeploymentID" enableCopy="false"/> for [password] navigate
+    ```
+    docker login <ACRname>.azurecr.io -u [uname] -p [password]
+   ```
 
-   **Note**: Please replace miyagi[did] with miyagi<inject key="DeploymentID" enableCopy="false"/>
+1. Run following command
+
+   **Note**: Please replace miyagiacr[did] with miyagiacr<inject key="DeploymentID" enableCopy="false"/>
 
    ```
     docker tag miyagi-ui:latest miyagiacr{did].azurecr.io/miyagi-ui:latest
@@ -132,6 +138,13 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr
    ```
 
 1. Navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
+
+1. Run following command.
+   **Note**: Please replace <ACRname> and [uname] with miyagiacr<inject key="DeploymentID" enableCopy="false"/> for [password] navigate
+
+    ```
+    docker login <ACRname>.azurecr.io -u [uname] -p [password]
+    ```
 
 1. Run following command
 
