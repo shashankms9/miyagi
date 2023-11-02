@@ -111,7 +111,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
 ### Task 3: Push two Images to the Azure container registery(acr)
 
-In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr 
+In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr. 
 
 1. Navigate to miyagi/ui/ right - click on ui/typescript in cascading menu, select **Open in intergate Terminal**.
 
@@ -125,14 +125,14 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr
 
 1. Run following command to add tag
 
-   **Note**: Please replace miyagiacr[did] with miyagiacr<inject key="DeploymentID" enableCopy="false"/>
+   **Note**: Please replace **miyagiacr[did]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
 
    ```
     docker tag miyagi-ui:latest miyagiacr{did].azurecr.io/miyagi-ui:latest
    ```
 1. Run the following command to push image to container registery
 
-   **Note**: Please replace miyagi[did] with miyagi<inject key="DeploymentID" enableCopy="false"/>
+   **Note**: Please replace **miyagiacr[did]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
 
    ```
     docker push miyagiacr[did].azurecr.io/miyagi-ui:latest
@@ -151,14 +151,14 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr
 
 1. Run following command to add tag.
 
-   **Note**: Please replace miyagi[did] with miyagi<inject key="DeploymentID" enableCopy="false"/>
+   **Note**: Please replace **miyagiacr[did]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
 
    ```
     docker tag miyagi-recommendation:latest miyagiacr{did].azurecr.io/miyagi-recommendation:latest
    ```
 1. Run the following command to push image to container registery
 
-   **Note**: Please replace miyagi[did] with miyagi<inject key="DeploymentID" enableCopy="false"/>
+   **Note**: Please replace **miyagiacr[did]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
 
    ```
     docker push miyagiacr[did].azurecr.io/miyagi-recommendation:latest
