@@ -1,0 +1,25 @@
+[
+  {
+    "Name": "Intelligent-Apps-Build-your-own-Copilot-Workshop",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/README.MD",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/Gettingstarted.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/Lab1.md",
+        "Order": 3
+      },
+       {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/Lab2.md",
+        "Order": 4
+      }
+    ]
+  }
+]
+
