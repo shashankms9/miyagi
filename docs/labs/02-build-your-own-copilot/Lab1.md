@@ -165,7 +165,32 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
  1. Once after Excuting all the cell you need see the output as shown in below diagram.
     ![](./Media/output.png)
    
-### Task 4: Run miyagi frontend locally
+
+### Task 4: Run recommendation service locally
+
+1. Open a new terminal: by navigating **miyagi/services/recommendation-service/dotnet** and right-click on in cascading menu select **Open in intergate Terminal**.
+
+    ![](./Media/image-rg-26.png)
+
+1. Run the following command to run the recommendation service locally
+    ```
+     dotnet build
+     dotnet run
+    ```
+
+   >**Note**: Wait for 5 mins and proceed with next step dont wait for script to complete
+
+1. Open a another tab in edge, and  browser the following
+   ```
+     http://localhost:5224/swagger/index.html 
+   ```
+
+   Get the port from the logs in the terminal. You should see the swagger page for the recommendation service.
+
+   ![](./Media/miyagi2.png)
+
+
+### Task 5: Run miyagi frontend locally
 
 1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
 
@@ -190,30 +215,6 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    ![](./Media/miyagi1.png)
    
-### Task 5: Run recommendation service locally
-
-1. Open a new terminal: by navigating **miyagi/services/recommendation-service/dotnet** and right-click on in cascading menu select **Open in intergate Terminal**.
-
-    ![](./Media/image-rg-26.png)
-
-1. Run the following command to run the recommendation service locally
-    ```
-     dotnet build
-     dotnet run
-    ```
-
-   >**Note**: Wait for 5 mins and proceed with next step dont wait for script to complete
-
-1. Open a another tab in edge, and  browser the following
-   ```
-     http://localhost:5224/swagger/index.html 
-   ```
-
-   Get the port from the logs in the terminal. You should see the swagger page for the recommendation service.
-
-   ![](./Media/miyagi2.png)
-
-
 ### Task 6: Vectorize and persist embeddings in Azure Cognitive Search
 
 1. Within LabVm double click on **Postman** to open which is presented on desktop.
@@ -271,14 +272,8 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    
     ```
       {
-      "metadata": {
-         "userId": "50",
-         "riskLevel": "aggressive",
-         "favoriteSubReddit": "finance",
-         "favoriteAdvisor": "Jim Cramer"
-      },
-      "dataSetName": "intelligent-investor"
-
+    "dataSetName": "intelligent-investor",
+    "count": 46
       }
     ```
 
