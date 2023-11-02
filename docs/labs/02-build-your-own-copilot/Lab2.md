@@ -14,7 +14,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
    ![](./Media/docker3.png)
 
-1. On **Create your account** window, specify the following details:
+1. On **Create your account** window, specify the following details and click on sign up.
 
    | **Settings**         | **Values**           | 
    | -------------------- | -------------------- | 
