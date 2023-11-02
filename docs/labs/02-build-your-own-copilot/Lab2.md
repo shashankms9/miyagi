@@ -41,7 +41,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 1. Run following command to build a Docker image
 
     ```
-    Docker build . -t miyagi-ui      
+    docker build . -t miyagi-ui      
     ```
 1. Run foolowing command to show the newly created image
    ```
