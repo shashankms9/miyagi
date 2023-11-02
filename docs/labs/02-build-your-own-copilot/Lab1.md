@@ -272,8 +272,8 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    
     ```
       {
-    "dataSetName": "intelligent-investor",
-    "count": 46
+       "dataSetName": "intelligent-investor",
+       "count": 46
       }
     ```
 
