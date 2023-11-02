@@ -279,15 +279,9 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 ### Task 7: Explore the recommendation service
 
-1. Get back to tab where **Miyagi** ui page displaying
+1. Get back to tab where **recommendation service** ui page displaying
 1. Click personalize button
-
-    ![](./Media/post9.png)
-
-1. Notice financial advisor and click on personalize
-
-   ![](./Media/post10.png)
-
+1. Notice financial advisor and click on personalize   
 1. You should see the recommendations from the recommendation service in the Top Stocks widget.
 
 
