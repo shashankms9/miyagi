@@ -218,6 +218,9 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 1. Within LabVm double click on **Postman** to open which is presented on desktop.
 1. On **Create a free Postman account** provide email Odluser<inject key="DeploymentID" enableCopy="false"/>  and click on **Create free account**.
+
+    ![](./Media/postman1.png)
+
 1. On **Create Postman account** window, provide following information and click on **Create free account**.
 
    | **Settings**         | **Values**           | 
@@ -226,12 +229,16 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    | Username             | Odluser<inject key="DeploymentID" enableCopy="false"/>              |
    | Password             | Pa55w.rd1234         |
    | Stay signed in for 30 days | Select the checkbox |
+   |||
+
+   ![](./Media/postman2.png)
    
 1. If **This site is trying to open Postman.** window prompted click on **Open**.
-1. If **Welcome to Postman! Tell us a bit about yourself** provide Yourname Odluser<inject key="DeploymentID" enableCopy="false"/>  and role, click on continue. 
-1. On the **Postman** blade select **Workspaces** and select **My Workspace**
+   ![](./Media/postman3.png)
+   
+1. If **Welcome to Postman! Tell us a bit about yourself** provide Yourname **Odluser<inject key="DeploymentID" enableCopy="false"/>**  and Select **role**, click on continue. 
+   ![](./Media/postman4.png)
 
-   ![](./Media/post03.png)
 
 1. On the **My Workspace** blade, click on **import** 
 
