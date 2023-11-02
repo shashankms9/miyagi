@@ -10,7 +10,8 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 1. On **Docker Subscription Service Agreement** window, click **Accept**.
    ![](./Media/docker2.png)
 
-1. On **Welcome to Docker Desktop** window, click on **sign up**
+1. On **Welcome to Docker Desktop** window, click on **sign up**.
+
    ![](./Media/docker3.png)
 
 1. On **Create your account** window, specify the following details:
@@ -27,7 +28,11 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
 1. On Sign in window, enter your email <inject key="AzureAdUserEmail"></inject> and click on **Continue**.
 
+   ![](./Media/docker4.png)
+
 1. On Enter your Password window, provide <inject key="AzureAdUserPassword"></inject> and click on **Continue**
+
+    ![](./Media/docker6.png)
 
 1. If **This site is trying to open docker desktop.** pop up's click on **Open**.
 
