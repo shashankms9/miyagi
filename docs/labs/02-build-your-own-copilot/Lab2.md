@@ -2,7 +2,7 @@
 
 In this lab, you'll be building the docker images and publishing it to Azure Container Apps.
 
-### Task 1: Build Docker Images for the Miyagi Application
+### Task 1: Build Docker Images for the Recommendation service
 
 1. Open Docker Application from the Lab VM desktop by double-clicking on it.
    ![](./Media/docker1.png)
@@ -35,6 +35,44 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
     ![](./Media/docker(6).png)
 
 1. If **This site is trying to open docker desktop.** pop up's click on **Open**.
+
+1. Navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
+
+1. Run following command to build a Docker image
+
+   ```
+   docker build . -t miyagi-recommemdation      
+   ```
+1. Run foolowing command to show the newly created image
+   ```
+   docker images
+   ```
+1. Run following command
+   ```
+   docker run -t miyagi-recommemdation -p 8002:80
+   ```
+1. Navigate back to **Docker desktop**, from left pane select **Images**.
+   ![](./Media/docker7.png)
+
+1. On **Images** blade, notice **miyagi-recommemdation(1)** image is created, select **run(2)** icon .
+   ![](./Media/docker13.png)
+
+1. On **Run a new containe** window select the dropdown arrow.
+
+   ![](./Media/docker14-1.png)
+
+1. On **Run a new containe**, under **Ports** for **Host Port** enter **8001** and click on **Run**.
+
+    ![](./Media/docker14.png)
+
+1. Click on **8001:3000** url link
+   ![](./Media/docker15.png)
+   
+1. You should be able to see the application running locally
+   
+   ![](./Media/docker16.png)
+
+### Task 2: Build Docker Images for the Miyagi-ui
 
 1. Navigate to miyagi/ui/ right - click on ui/typescript in cascading menu, select **Open in intergate Terminal**.
 
@@ -71,43 +109,6 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 1. You should be able to see the application running locally
    
    ![](./Media/docker12.png)
-
-### Task 2: Build Docker Images for the Recommendation service
-
-1. Navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
-1. Run following command to build a Docker image
-
-   ```
-   docker build . -t miyagi-recommemdation      
-   ```
-1. Run foolowing command to show the newly created image
-   ```
-   docker images
-   ```
-1. Run following command
-   ```
-   docker run -t miyagi-recommemdation -p 8002:80
-   ```
-1. Navigate back to **Docker desktop**, from left pane select **Images**.
-   ![](./Media/docker7.png)
-
-1. On **Images** blade, notice **miyagi-recommemdation(1)** image is created, select **run(2)** icon .
-   ![](./Media/docker13.png)
-
-1. On **Run a new containe** window select the dropdown arrow.
-
-   ![](./Media/docker14-1.png)
-
-1. On **Run a new containe**, under **Ports** for **Host Port** enter **8001** and click on **Run**.
-
-    ![](./Media/docker14.png)
-
-1. Click on **8001:3000** url link
-   ![](./Media/docker15.png)
-   
-1. You should be able to see the application running locally
-   
-   ![](./Media/docker16.png)
 
 ### Task 3: Push two Images to the Azure container registery(acr)
 
