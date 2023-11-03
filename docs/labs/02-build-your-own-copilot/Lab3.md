@@ -79,9 +79,11 @@ In this lab, you'll be exposing Open AI through APIM Gateway URL for Miyagi Appl
 
    ![](./Media/lab3-t3-s2.png)
 
-1. You will see the **Revision details** pop-up in the right-side, click on **Restart**.
+1. You will see the **Revision details** pop-up in the right-side, click on **Restart**. You will see a pop-up to restart the revision, click on **Continue** to confirm.
 
    ![](./Media/lab3-t3-s3.png)
+
+   ![](./Media/lab3-t3-s3.1.png)
 
 1. You will see the notification once the Revision is restarted successfully.
 
