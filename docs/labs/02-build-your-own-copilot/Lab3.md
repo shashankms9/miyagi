@@ -25,9 +25,9 @@ In this lab, you'll be exposing Open AI through APIM Gateway URL for Miyagi Appl
 
    ![](./Media/lab3-t1-s3.png)
 
-1. Once API is created. Click on **Overview** **(1)** from the left-menu, copy the **Gateway URL** **(2)** of API Management service for later use and paste it in notepad.
+1. Once API is created, click on **Overview** **(1)** from the left-menu and copy the **Gateway URL** **(2)** of API Management service. Paste it into Notepad for later use.
 
-   ![](./Media/lab3-t1-s3.png)
+   ![](./Media/lab3-t1-s4.png)
 
 ### Task 2: Update the Docker Image for Recommendation service
 
