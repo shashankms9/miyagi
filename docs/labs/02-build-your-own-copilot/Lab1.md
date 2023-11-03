@@ -6,6 +6,8 @@ In this lab, you'll setup and configure Miyagi app locally.
 
 1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
 
+   ![](./Media/vs.png)
+
    >**Note** If **Join us in making promt-flow extension better!** window prompted please click on **No,thanks**.
 
    ![](./Media/image-rg-01.png)
@@ -218,7 +220,9 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    
 ### Task 6: Vectorize and persist embeddings in Azure Cognitive Search
 
-1. Within LabVm double click on **Postman** to open which is presented on desktop.
+1. Open **Postman** from the Lab VM desktop by double-clicking on it.
+    ![](./Media/pm.png)
+
 1. On **Create a free Postman account** provide email Odluser<inject key="DeploymentID" enableCopy="false"/>  and click on **Create free account**.
 
     ![](./Media/postman1.png)
