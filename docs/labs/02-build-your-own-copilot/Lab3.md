@@ -89,7 +89,7 @@ In this lab, you'll be exposing Open AI through APIM Gateway URL for Miyagi Appl
 
 1. Select **Ingress** **(1)** under Settings from left-menu and then scroll-down to Endponits of Conatiner App i.e, **miyagi-rec-ca-<inject key="DeploymentID" enableCopy="false"/>-SUFFIX** **(2)**. Click on secured link to open it.
 
-  ![](./Media/lab3-t3-s4.png)
+   ![](./Media/lab3-t3-s4.png)
 
 1. You can see the swagger page for the recommendation service as shown in the below image:
 
