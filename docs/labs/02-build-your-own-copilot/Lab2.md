@@ -36,7 +36,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
 1. If **This site is trying to open docker desktop.** pop up's click on **Open**.
 
-1. Back on **Visual studio code** and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
+1. Return to **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
 
 1. Run following command to build a Docker image
 
@@ -51,7 +51,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
    ```
    docker run -t miyagi-recommemdation -p 8002:80
    ```
-1. Navigate back to **Docker desktop**, from left pane select **Images**.
+1. Navigate back to **Docker desktop**, from the left pane select **Images**.
    ![](./Media/docker7.png)
 
 1. On **Images** blade, notice **miyagi-recommemdation(1)** image is created, select **run(2)** icon .
@@ -74,7 +74,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
 ### Task 2: Build Docker Images for the Miyagi-ui
 
-1. Back on **Visual studio code** and navigate miyagi/ui/ right - click on ui/typescript in cascading menu, select **Open in intergate Terminal**.
+1. Return to **Visual studio code** window and navigate miyagi/ui/ right - click on ui/typescript in cascading menu, select **Open in intergate Terminal**.
 
 1. Run following command to build a Docker image
 
@@ -89,7 +89,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
    ```
    docker run -t miyagi-ui -p 8001:3000
    ```
-1. Navigate back to **Docker desktop**, from left pane select **Images**.
+1. Navigate back to **Docker desktop**, from the left pane select **Images**.
    ![](./Media/docker7.png)
 
 1. On **Images** blade, notice **miyagi-ui(1)** image is created, select **run(2)** icon .
@@ -114,7 +114,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
 In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr. 
 
-1. Back on **Visual studio code** and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
+1. Return to **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
 
 1. Run following command to login.
 
@@ -140,7 +140,7 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
 
    ```
 
-1. Back on **Visual studio code** and navigate to **miyagi/ui**, right - click on ui/typescript in cascading menu, select **Open in intergate Terminal**.
+1. Return to **Visual studio code** window and navigate to **miyagi/ui**, right - click on ui/typescript in cascading menu, select **Open in intergate Terminal**.
 
 1. Run following command to login.
 
