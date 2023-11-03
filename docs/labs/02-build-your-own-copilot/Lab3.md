@@ -12,7 +12,16 @@ In this lab, you'll be exposing Open AI through APIM as a gateway for Miyagi App
 
    ![](./Media/lab3-t1-s2.png)
 
-1. In Create an HTTP API pane, select **Basic** API **(1)** and enter **Display name** as **miyagi-api** **(2)**. Leave **Name** as default with the provided Display name **(3)**. For **Web service URL**, enter the **endpoint** **(4)** of OpenAI resource named **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**. Enter **API URL suffix** as **miyagi** **(5)** and then click on **Create** **(6)**.
+1. Enter the following values in the Create an HTTP API pane:
+   
+   | **Parameter**        | **Values**           | 
+   | -------------------- | -------------------- | 
+   | API Type **(1)**     | **Basic**            | 
+   | Display name **(2)** | **miyagi-api**       |
+   | Name **(3)**         | **miyagi-api**       |
+   | Web service URL **(4)** | Enter the Endpoint of OpenAI resource named **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**  |
+   | API URL suffix **(5)** | **miyagi** |
+   | Click on  **(6)** | **Create** |
 
    ![](./Media/lab3-t1-s3.png)
 
@@ -52,7 +61,7 @@ In this lab, you'll be exposing Open AI through APIM as a gateway for Miyagi App
 
 1. Once you are logged into ACR. Run the below command to push the update docker image of recommendation service to container registery
 
-   **Note**: Make sure to replace **miyagiacr[DID]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
+   **Note**: Make sure to replace **miyagiacr[DID]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**.
 
    ```
    docker push miyagiacr[DID].azurecr.io/miyagi-recommendation:latest
