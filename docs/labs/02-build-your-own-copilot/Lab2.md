@@ -178,5 +178,109 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
 
    ```
 
+1. Return to **Azure Portal** window and navigate to **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group.
 
+1. On **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** blade, from the resources list select **Container Apps Environment**.
+
+    ![](./Media/acr1.png)
+
+1. on **Container Apps Environment**. blade from left pane under **Apps** section select **Apps** and click on **+ Create**.
+    ![](./Media/acr2.png)
+
+1. On the basics tab of **Create Container App** blade specify the following details and select **Next:container>**.
+
+   | **Settings**         | **Values**           | 
+   | -------------------- | -------------------- | 
+   | Subscription         | Leave default | 
+   | Resource group       | **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group. |
+   | Container app name	  | Enter **miyagi-rec-ca-<inject key="DeploymentID" enableCopy="false"/>**           |
+   |||
+   ![](./Media/acr-ui-2.png)
+
+1. On the **Container** tab of **Create Container App** blade specify the following details and select **Next:Ingress>**.
+
+   | **Settings**         | **Values**           | 
+   | -------------------- | -------------------- | 
+   | Use quickstart image | Unselect the checkbox | 
+   | Name                 | **miyagi-rec-ca-<inject key="DeploymentID" enableCopy="false"/>** |
+   | Image source         | Select Azure Container Registry  |
+   | Registry             | Select miyagiacr<inject key="DeploymentID" enableCopy="false"/>.azurecr.io |
+   | Image                | Select miyagi-recommendation              |
+   | Image tag     	     | Latest         | 
+   | CPU and Memory       | 1 CPU cores, 2Gi memory        | 
+   |||
+   ![](./Media/acr-ui-3.png)
+
+1. On the **Ingress** tab of **Create Container App** blade specify the following details, select **Review + Create** and **Create**.
+
+   | **Settings**         | **Values**           | 
+   | -------------------- | -------------------- | 
+   | Ingress              | select the checkbox | 
+   | Ingress traffic      | Select **Accepting traffic from anywhere**             |
+   | Ingress type  	     | Select **HTTP**            |
+   | Client certificate mode | Select **Ingore** |
+   | Insecure connections | Select checkbox **Allowed**        |
+   | Target port   	     | **80**         |
+   |||
+   ![](./Media/acr-ui-4.png)
+   
+1. Once deployment gets success click on **Go to resource**
+   ![](./Media/acr-ui-5.png)
+1. On **miyagi-rec-ca-<inject key="DeploymentID" enableCopy="false"/>** page, from left navigation pane select **Ingress** and click on **Endpoints** URL link.
+   ![](./Media/acr-ui-6.png)
+
+1. You should get swagger page for the recommendation service as depicted in the image below.
+   ![](./Media/acr-ui-6-1.png)
+
+1. Reture back to **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** blade, from the resources list select **Container Apps Environment**.
+
+    ![](./Media/acr1.png)
+
+1. on **Container Apps Environment**. blade from left pane under **Apps** section select **Apps** and click on **+ Create**.
+    ![](./Media/acr-ui-7.png)
+
+1. On the basics tab of **Create Container App** blade specify the following details and select **Next:container>**.
+
+   | **Settings**         | **Values**           | 
+   | -------------------- | -------------------- | 
+   | Subscription         | Leave default | 
+   | Resource group       | **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group. |
+   | Container app name	  | Enter **miyagi-ui-ca-<inject key="DeploymentID" enableCopy="false"/>**           |
+   |||
+   ![](./Media/acr-ui-8.png)
+
+1. On the **Container** tab of **Create Container App** blade specify the following details and select **Next:Ingress>**.
+
+   | **Settings**         | **Values**           | 
+   | -------------------- | -------------------- | 
+   | Use quickstart image | Unselect the checkbox | 
+   | Name                 | **miyagi-ui-ca-<inject key="DeploymentID" enableCopy="false"/>** |
+   | Image source         | Select Azure Container Registry  |
+   | Registry             | Select miyagiacr<inject key="DeploymentID" enableCopy="false"/>.azurecr.io |
+   | Image                | Select miyagi-ui            |
+   | Image tag     	     | Latest         | 
+   | CPU and Memory       | 1 CPU cores, 2Gi memory        | 
+   |||
+   ![](./Media/acr-ui-9.png)
+
+1. On the **Ingress** tab of **Create Container App** blade specify the following details, select **Review + Create** and **Create**.
+
+   | **Settings**         | **Values**           | 
+   | -------------------- | -------------------- | 
+   | Ingress              | select the checkbox | 
+   | Ingress traffic      | Select **Accepting traffic from anywhere**             |
+   | Ingress type  	     | Select **HTTP**            |
+   | Client certificate mode | Select **Ingore** |
+   | Insecure connections | Select checkbox **Allowed**        |
+   | Target port   	     | **3000**         |
+   |||
+   ![](./Media/acr-ui-10.png)
+   
+1. Once deployment gets success click on **Go to resource**
+   ![](./Media/acr-ui-11.png)
+1. On **miyagi-ui-ca-<inject key="DeploymentID" enableCopy="false"/>** page, from left navigation pane select **Ingress** and click on **Endpoints** URL link.
+   ![](./Media/acr-ui-12.png)
+
+1. You should get swagger page for the recommendation service as depicted in the image below.
+   ![](./Media/acr-ui-13.png)
 
