@@ -89,13 +89,16 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
     ```
     docker build . -t miyagi-ui      
     ```
+    ![](./Media/task2-3.png)
+
     **Note**: kindly wait this command may take some time to complete.
 
 1. Run foolowing command to show the newly created image
    ```
    docker images
    ```
-  
+  ![](./Media/task2-4.png)
+
 1. Run following command
    ```
    docker run -t miyagi-ui -p 8001:3000
@@ -135,7 +138,9 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
     ```
     docker login [ACRname].azurecr.io -u [uname] -p [password]
     ```
+    ![](./Media/task2-5.png)
 
+    
 1. Run following command to add tag.
 
    **Note**: Please replace **miyagiacr[DID]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
@@ -151,6 +156,7 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
     docker push miyagiacr[DID].azurecr.io/miyagi-recommendation:latest
 
    ```
+   ![](./Media/task2-6.png)
 
 1. Return to **Visual studio code** window and navigate to **miyagi/ui**, right - click on ui/typescript in cascading menu, select **Open in intergate Terminal**.
 
@@ -162,6 +168,8 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
     docker login [ACRname].azurecr.io -u [uname] -p [password]
    ```
 
+   ![](./Media/task2-7.png)
+   
 1. Run following command to add tag
 
    **Note**: Please replace **miyagiacr[DID]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
@@ -177,6 +185,7 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
     docker push miyagiacr[DID].azurecr.io/miyagi-ui:latest
 
    ```
+   ![](./Media/task2-8.png)
 
 1. Return to **Azure Portal** window and navigate to **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group.
 
@@ -195,6 +204,7 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
    | Resource group       | **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group. |
    | Container app name	  | Enter **miyagi-rec-ca-<inject key="DeploymentID" enableCopy="false"/>**           |
    |||
+
    ![](./Media/acr-ui-2.png)
 
 1. On the **Container** tab of **Create Container App** blade specify the following details and select **Next:Ingress>**.
@@ -209,7 +219,8 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
    | Image tag     	     | Latest         | 
    | CPU and Memory       | 1 CPU cores, 2Gi memory        | 
    |||
-   ![](./Media/acr-ui-3.png)
+
+    ![](./Media/acr-ui-3.png)
 
 1. On the **Ingress** tab of **Create Container App** blade specify the following details, select **Review + Create** and **Create**.
 
@@ -222,6 +233,7 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
    | Insecure connections | Select checkbox **Allowed**        |
    | Target port   	     | **80**         |
    |||
+
    ![](./Media/acr-ui-4.png)
    
 1. Once deployment gets success click on **Go to resource**
@@ -247,6 +259,7 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
    | Resource group       | **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group. |
    | Container app name	  | Enter **miyagi-ui-ca-<inject key="DeploymentID" enableCopy="false"/>**           |
    |||
+
    ![](./Media/acr-ui-8.png)
 
 1. On the **Container** tab of **Create Container App** blade specify the following details and select **Next:Ingress>**.
@@ -261,6 +274,7 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
    | Image tag     	     | Latest         | 
    | CPU and Memory       | 1 CPU cores, 2Gi memory        | 
    |||
+
    ![](./Media/acr-ui-9.png)
 
 1. On the **Ingress** tab of **Create Container App** blade specify the following details, select **Review + Create** and **Create**.
@@ -274,7 +288,8 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
    | Insecure connections | Select checkbox **Allowed**        |
    | Target port   	     | **3000**         |
    |||
-   ![](./Media/acr-ui-10.png)
+
+   ![](./Media/acr-ui-010.png)
    
 1. Once deployment gets success click on **Go to resource**
    ![](./Media/acr-ui-11.png)
