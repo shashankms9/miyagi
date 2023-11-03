@@ -56,13 +56,13 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
 1. Run following command
    ```
-   docker run -t miyagi-recommemdation -p 8002:80
+   docker run -t miyagi-recommendation -p 8002:80
    ```
 
 1. Navigate back to **Docker desktop**, from the left pane select **Images**.
    ![](./Media/docker7.png)
 
-1. On **Images** blade, notice **miyagi-recommemdation(1)** image is created, select **run(2)** icon .
+1. On **Images** blade, notice **miyagi-recommendation(1)** image is created, select **run(2)** icon .
    ![](./Media/docker13.png)
 
 1. On **Run a new containe** window select the dropdown arrow.
