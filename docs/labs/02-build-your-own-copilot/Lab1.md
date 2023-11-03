@@ -178,14 +178,14 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
      dotnet run
     ```
 
-   >**Note**: Wait for 5 mins and proceed with next step dont wait for script to complete
+   **Note**: Let the command run, meanwhile you can proceed with the next step.
 
-1. Open a another tab in edge, and  browser the following
+1. Open a another tab in edge, in browser window paste the following link
    ```
      http://localhost:5224/swagger/index.html 
    ```
 
-   Get the port from the logs in the terminal. You should see the swagger page for the recommendation service.
+   **Note**: Refresh the page continuously until you get swagger page for the recommendation service as depicted in the image below.
 
    ![](./Media/miyagi2.png)
 
@@ -204,15 +204,15 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
      yarn dev
     ```
 
-   >**Note**: Wait for 5 mins and proceed with next step dont wait for script to complete.
+   **Note**: Let the command run, meanwhile you can proceed with the next step.
 
 1. Open a another tab in edge, and  browser the following
    ```
      http://localhost:4001
    ```
 
-   Get the port from the logs in the terminal. You should see the miyagi app running locally.
-
+   **Note**: Refresh the page continuously until you miyagi app running locally as depicted in the image below.
+                       
    ![](./Media/miyagi1.png)
    
 ### Task 6: Vectorize and persist embeddings in Azure Cognitive Search
