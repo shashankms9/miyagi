@@ -20,7 +20,7 @@ In this lab, you'll be exposing Open AI through APIM as a gateway for Miyagi App
 
    ![](./Media/lab3-t1-s3.png)
 
-### Task 2: Update the Docker Image for Recommendations
+### Task 2: Update the Docker Image for Recommendation service
 
 1. Navigate to Visual Studio Code, open the `appsettings.json` file from the path `C:\LabFiles\miyagi\services\recommendation-service\dotnet\appsettings.json`.
 
@@ -30,7 +30,17 @@ In this lab, you'll be exposing Open AI through APIM as a gateway for Miyagi App
 
    ![](./Media/lab3-t2-s2.png)
 
-1. 
+1. From the Explorer, navigate to `Miyagi/services/recommendation-service/dotnet/` **(1)** path. Right-click on `dotnet` folder and select **Open in Integrated Terminal** **(2)** from the options tab to open terminal with required path.
 
-   
+   ![](./Media/lab3-t2-s3.png)
+
+1. Now, you need to re-build the docker image for recommendation service by running the below docker command. Make to update the docker image name which was created earlier for recommendation service with the same name.
+
+   ```
+   docker build . -t [Docker_Image_Name_Recommendation_Service]
+   ```
+
+   ![](./Media/lab3-t2-s4.png)
+
+1. 
 
