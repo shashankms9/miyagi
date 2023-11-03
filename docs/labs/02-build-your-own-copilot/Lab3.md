@@ -1,6 +1,6 @@
 # Lab 3 - Expose Open AI through APIM
 
-In this lab, you'll be exposing Open AI through APIM as a gateway for Miyagi Application.
+In this lab, you'll be exposing Open AI through APIM Gateway URL for Miyagi Application.
 
 ### Task 1: Verify the deployed API Management service and create an API
 
