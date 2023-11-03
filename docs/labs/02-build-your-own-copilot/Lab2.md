@@ -96,7 +96,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
    ```
    docker images
    ```
-  ![](./Media/task2-4.png)
+   ![](./Media/task2-4.png)
 
 1. Run following command
    ```
@@ -185,6 +185,9 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
 
    ```
    ![](./Media/task2-8.png)
+
+
+### Task 4: Configure the Container App for miyagi-ui
 
 1. Return to **Azure Portal** window and navigate to **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group.
 
@@ -300,7 +303,7 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
    ![](./Media/acr-ui-13.png)
 
 
-### Task 5 : Update Container App Recommendation service url for miyagi-ui 
+### Task 5: Update Container App Recommendation service url for miyagi-ui 
 
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Container Apps (1)**, and then select **Container Apps (2)** under services.
    ![](./Media/cntr1.png)
