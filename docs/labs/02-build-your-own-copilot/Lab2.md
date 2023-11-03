@@ -43,14 +43,22 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
    ```
    docker build . -t miyagi-recommemdation      
    ```
+
+   ![](./Media/task2-1.png)
+
+   **Note**: kindly wait this command may take some time to complete.
+
 1. Run foolowing command to show the newly created image
    ```
    docker images
    ```
+   ![](./Media/task2-2.png)
+
 1. Run following command
    ```
    docker run -t miyagi-recommemdation -p 8002:80
    ```
+
 1. Navigate back to **Docker desktop**, from the left pane select **Images**.
    ![](./Media/docker7.png)
 
@@ -81,14 +89,18 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
     ```
     docker build . -t miyagi-ui      
     ```
+    **Note**: kindly wait this command may take some time to complete.
+
 1. Run foolowing command to show the newly created image
    ```
    docker images
    ```
+  
 1. Run following command
    ```
    docker run -t miyagi-ui -p 8001:3000
    ```
+
 1. Navigate back to **Docker desktop**, from the left pane select **Images**.
    ![](./Media/docker7.png)
 
