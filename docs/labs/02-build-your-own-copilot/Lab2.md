@@ -22,7 +22,6 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
    | Username             | Odluser<inject key="DeploymentID" enableCopy="false"/>   |
    | Password             | <inject key="AzureAdUserPassword"></inject>         |
    | Send me occasional product updates and announcements. | Select the checkbox |
-   |||
 
    ![](./Media/docker5.png)
 
@@ -162,7 +161,7 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
 
 1. Run following command to login.
 
-    **Note**: Please replace **[ACRname]** and **[uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for [password] navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of recources and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
+   **Note**: Please replace **<ACR_Name>** and **[Uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**. For [password], navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from the resources list. Under Settings, select **Access Keys** and select the check box for **Admin user** and then copy the password.
 
    ```
     docker login [ACRname].azurecr.io -u [uname] -p [password]
