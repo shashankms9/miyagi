@@ -170,7 +170,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 1. Open a new terminal: by navigating **miyagi/services/recommendation-service/dotnet** and right-click on in cascading menu select **Open in intergate Terminal**.
 
-    ![](./Media/image-rg-26.png)
+    ![](./Media/task4-1.png)
 
 1. Run the following command to run the recommendation service locally
     ```
