@@ -37,7 +37,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
 1. Return to **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
 
-1. Run following command to build a Docker image
+1. Run following command to build a **Docker image**
 
    ```
    docker build . -t miyagi-recommemdation      
@@ -45,17 +45,17 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
    ![](./Media/task2-1.png)
 
-   **Note**: kindly wait this command may take some time to complete.
+   **Note**: Please wait as this command may require some time to complete.
 
-1. Run foolowing command to show the newly created image
+1. Run following command to get the newly created image.
    ```
    docker images
    ```
    ![](./Media/task2-2.png)
 
-1. Run following command
+1. Run following command for running a Docker container.
    ```
-   docker run -t miyagi-recommendation -p 8002:80
+   docker run -t miyagi-recommendation -p 80
    ```
 
 1. Navigate back to **Docker desktop**, from the left pane select **Images**.
@@ -72,7 +72,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
     ![](./Media/docker14.png)
 
-1. Click on **8001:3000** url link
+1. Click on **8002:80** url link
    ![](./Media/docker15.png)
    
 1. You should be able to see the application running locally
@@ -92,15 +92,15 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
     **Note**: kindly wait this command may take some time to complete.
 
-1. Run foolowing command to show the newly created image
+1. Run following command to get the newly created image.
    ```
    docker images
    ```
    ![](./Media/task2-4.png)
 
-1. Run following command
+1. Run following command for running a Docker container.
    ```
-   docker run -t miyagi-ui -p 8001:3000
+   docker run -t miyagi-ui -p 3000
    ```
 
 1. Navigate back to **Docker desktop**, from the left pane select **Images**.
@@ -132,7 +132,7 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
 
 1. Run following command to login.
 
-   **Note**: Please replace **[ACRname>]** and **[uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for [password] navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of recources and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
+   **Note**: Please replace **[ACRname>]** and **[uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for **[password]** navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of resource and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
 
     ```
     docker login [ACRname].azurecr.io -u [uname] -p [password]
@@ -161,7 +161,7 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
 
 1. Run following command to login.
 
-   **Note**: Please replace **<ACR_Name>** and **[Uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**. For [password], navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from the resources list. Under Settings, select **Access Keys** and select the check box for **Admin user** and then copy the password.
+   **Note**: Please replace **[ACR_Name]** and **[Uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**. For **[password]**, navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from the resource list. Under Settings, select **Access Keys** and select the check box for **Admin user** and then copy the password.
 
    ```
     docker login [ACRname].azurecr.io -u [uname] -p [password]
@@ -319,7 +319,7 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
 1. Right - click on **ui/typescript** in cascading menu, select **Open in intergate Terminal**.
 1. Run following command to login.
 
-   **Note**: Please replace **[ACRname>]** and **[uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for [password] navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of recources and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
+   **Note**: Please replace **[ACRname>]** and **[uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for **[password]** navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of recources and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
 
     ```
     docker login [ACRname].azurecr.io -u [uname] -p [password]
@@ -335,6 +335,7 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
    ```
 
 1. Reture to **Azure Portal** in Search resources, services and docs (G+/) box at the top of the portal, enter **Container Apps**, and then select **Container Apps** under services.
+
 1. On **Container Apps** blade, select **miyagi-ui-ca-<inject key="DeploymentID" enableCopy="false"/>**.
     ![](./Media/cntr5.png)
 
