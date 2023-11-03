@@ -42,5 +42,23 @@ In this lab, you'll be exposing Open AI through APIM as a gateway for Miyagi App
 
    ![](./Media/lab3-t2-s4.png)
 
-1. 
+1. Run following command to ACR login.
+
+   **Note**: Please replace **<ACR_Name>** and **[Uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**. For [password], navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from the resources list. Under Settings, select **Access Keys** and select the check box for **Admin user** and then copy the password.
+
+    ```
+    docker login <ACRname>.azurecr.io -u [uname] -p [password]
+    ```
+
+1. Once you are logged into ACR. Run the below command to push the update docker image of recommendation service to container registery
+
+   **Note**: Make sure to replace **miyagiacr[DID]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
+
+   ```
+   docker push miyagiacr[DID].azurecr.io/miyagi-recommendation:latest
+   ```
+
+   ![](./Media/lab3-t2-s5.png)
+
+
 
