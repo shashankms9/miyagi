@@ -154,10 +154,7 @@ In this lab, you'll setup and configure Miyagi app locally.
    -  **embeddingDeploymentOrModelId** Replace  <Your Open AI Embeddings model Deployment Id> with deployment name for text-embedding-ada-002
    -  **Open AI Endpoint**: Replace "<Your Open AI Endpoint>" with Open AI Endpoint
    -  **Open AI API Key:** Replace "<Your Open AI API Key>" with Open AI Key
-   -  **Cosmos DB Connection String:** Go to Azure Portal -> Resource Groups -> select miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> -> Select the cosmos-<inject key="DeploymentID" enableCopy="false"/> -> 
-      Keys-> Copy the value of the Cosmos DB Primary Connection String.
-
-      ![](./Media/string.png)
+   -  **Cosmos DB Connection String:**  Replace "< Your Cosmos DB Connection String >" with the cosmos key
 
 ### Task 3: Understanding implementation of the recommendation service
 
