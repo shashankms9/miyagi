@@ -106,8 +106,11 @@ In this lab, you'll setup and configure Miyagi app locally.
       ![](./Media/image-rg-16.png)
 
       >**Note**: Please record **URL** in notepad you need this values in further tasks.
-      
-   1. Get back to visual studio and paste URL to **CosmosDBURI** and for **cosmosDbName** replace "miyagi** with **cosmos-<inject key="DeploymentID" enableCopy="false"/>**
+
+   1. On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** under **Settings** select **Keys** and Copy the value of the **Cosmos DB Primary Connection String**.
+      ![](./Media/cs.png)
+
+   1. Get back to visual studio and paste URL to **CosmosDBURI**, PRIMARY CONNECTION STRING to **Cosmos DB Connection String:** and  for **cosmosDbName** replace "miyagi** with **cosmos-<inject key="DeploymentID" enableCopy="false"/>**
 
         >**Note**: Please record **Name** values in notepad you need this values in further tasks.
 
