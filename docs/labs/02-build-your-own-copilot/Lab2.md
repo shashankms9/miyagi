@@ -61,7 +61,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
    ![](./Media/docker14-1.png)
 
-1. On **Run a new containe**, under **Ports** for **Host Port** enter **8001** and click on **Run**.
+1. On **Run a new containe**, under **Ports** for **Host Port** enter **8002** and click on **Run**.
 
     ![](./Media/docker14.png)
 
