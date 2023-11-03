@@ -4,26 +4,27 @@ In this lab, you'll setup and configure Miyagi app locally.
 
 ### Task 1: Setup configuration for miyagi app
 
-1. Open Visual Studio Code on the Lab VM by selecting the shortcut on the desktop and then double-click on it to open.
+1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
 
    >**Note** If **Join us in making promt-flow extension better!** window prompted please click on **No,thanks**.
 
    ![](./Media/image-rg-01.png)
    
-1. In Visual Studio Code from menu bar select **File(1)** **open folder(2)**,
+1. In **Visual Studio Code** from menu bar select **File(1)>open folder(2)**.
 
    ![](./Media/image-rg-02.png)
 
-1. In file explorer navigate to C:\LabFiles\miyagi select **miyagi**(1) click on **Select folder(2)**
+1. Within **File Explorer**, navigate to C:\LabFiles\miyagi select **miyagi**(1) click on **Select folder(2)**
 
    ![](./Media/image-rg(003).png)
 
-1. In Visual Studio Code if **Do you trust the authors of the files in this folder?** window prompted click on **Yes, I trust the authors**.
+1. In **Visual Studio Code**, click on **Yes, I trust the authors** when **Do you trust the authors of the files in this folder?** window prompted.
+
    ![](./Media/image-rg-18.png)
    
-1. Expand **miyagi>ui** and verify **.env.** file is present
+1. Expand **miyagi>ui** directory and verify that **.env.** file is present. 
 
-1. Expand **miyagi/services/recommendation-service/dotnet** and verify **appsettings.json** is present.
+1. Expand **miyagi/services/recommendation-service/dotnet** directory and verify that **appsettings.json** is present.
   
 1. Update appsettings.json with the values for the variables below. You can get the values from the Azure Portal.
 
