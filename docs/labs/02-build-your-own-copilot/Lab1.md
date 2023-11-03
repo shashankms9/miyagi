@@ -212,7 +212,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
      http://localhost:4001
    ```
 
-   **Note**: Refresh the page continuously until you miyagi app running locally as depicted in the image below.
+   **Note**: Refresh the page continuously until you get miyagi app running locally as depicted in the image below.
                        
    ![](./Media/miyagi1.png)
    
