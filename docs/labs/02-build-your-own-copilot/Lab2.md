@@ -118,10 +118,10 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
 
 1. Run following command to login.
 
-   **Note**: Please replace **<ACRname>** and **[uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for [password] navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of recources and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
+   **Note**: Please replace **[ACRname>]** and **[uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for [password] navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of recources and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
 
     ```
-    docker login <ACRname>.azurecr.io -u [uname] -p [password]
+    docker login [ACRname].azurecr.io -u [uname] -p [password]
     ```
 
 1. Run following command to add tag.
@@ -145,10 +145,10 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
 
 1. Run following command to login.
 
-    **Note**: Please replace **<ACRname>** and **[uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for [password] navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of recources and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
+    **Note**: Please replace **[ACRname]** and **[uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for [password] navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of recources and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
 
    ```
-    docker login <ACRname>.azurecr.io -u [uname] -p [password]
+    docker login [ACRname].azurecr.io -u [uname] -p [password]
    ```
 
 1. Run following command to add tag
