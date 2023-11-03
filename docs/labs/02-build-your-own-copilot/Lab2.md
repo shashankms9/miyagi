@@ -25,11 +25,11 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
    ![](./Media/docker5.png)
 
-1. On Sign in window, enter your email <inject key="AzureAdUserEmail"></inject> and click on **Continue**.
+1. On **Sign in** window, enter your email <inject key="AzureAdUserEmail"></inject> and click on **Continue**.
 
    ![](./Media/docker4.png)
 
-1. On Enter your Password window, provide <inject key="AzureAdUserPassword"></inject> and click on **Continue**
+1. On **Enter your Password** window, provide <inject key="AzureAdUserPassword"></inject> and click on **Continue**
 
     ![](./Media/docker(6).png)
 
