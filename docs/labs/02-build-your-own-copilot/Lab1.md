@@ -161,6 +161,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step by step details of how the Recommendation Service is implemented. Pay special attention to how RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
 
 1. In Visual Studio Code navigate to **miyagi/sandbox/usecases/rag/dotnet** folder and select **Getting-started.ipynb**
+
    ![](./Media/image-rg-23.png)
 
 1. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
@@ -168,9 +169,9 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    ![](./Media/run.png)
 
  1. Once after Excuting all the cell you need see the output as shown in below diagram.
+
     ![](./Media/output.png)
    
-
 ### Task 4: Run recommendation service locally
 
 1. Open a new terminal: by navigating **miyagi/services/recommendation-service/dotnet** and right-click on in cascading menu select **Open in intergate Terminal**.
@@ -185,12 +186,13 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    **Note**: Let the command run, meanwhile you can proceed with the next step.
 
-1. Open a another tab in edge, in browser window paste the following link
+1. Open another tab in Edge, in the browser window paste the following link
+
    ```
      http://localhost:5224/swagger/index.html 
    ```
 
-   **Note**: Refresh the page continuously until you get swagger page for the recommendation service as depicted in the image below.
+   **Note**: Refresh the page continuously until you get the swagger page for the recommendation service as depicted in the image below.
 
    ![](./Media/miyagi2.png)
 
@@ -211,7 +213,8 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    **Note**: Let the command run, meanwhile you can proceed with the next step.
 
-1. Open a another tab in edge, and  browser the following
+1. Open another tab in Edge, and  browse the following
+
    ```
      http://localhost:4001
    ```
@@ -220,77 +223,54 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
                        
    ![](./Media/miyagi1.png)
    
-### Task 6: Vectorize and persist embeddings in Azure Cognitive Search
+### Task 6: Persist embeddings in Azure Cognitive Search
 
-1. Open **Postman** from the Lab VM desktop by double-clicking on it.
-    ![](./Media/pm.png)
+1. Navigate back to the **swagger UI** page, scoll to **Memory** session, click on **POST /dataset** for expansion, and click on **Try it out**.
 
-1. On **Create a free Postman account** provide email Odluser<inject key="DeploymentID" enableCopy="false"/>  and click on **Create free account**.
+   ![](./Media/swaggerUI-memory.png)
 
-    ![](./Media/postman1.png)
+1. Replace the code with the below code, and click on **Execution**.
 
-1. On **Create Postman account** window, provide following information and click on **Create free account**.
+      ```
+        {
+        "metadata": {
+            "userId": "50",
+            "riskLevel": "aggressive",
+            "favoriteSubReddit": "finance",
+            "favoriteAdvisor": "Jim Cramer"
+        },
+        "dataSetName": "intelligent-investor"
+        }
+      ```
 
-   | **Settings**         | **Values**           | 
-   | -------------------- | -------------------- | 
-   | Email                | <inject key="AzureAdUserEmail"></inject>  | 
-   | Username             | Odluser<inject key="DeploymentID" enableCopy="false"/>              |
-   | Password             | <inject key="AzureAdUserPassword"></inject>         |
-   | Stay signed in for 30 days | Select the checkbox |
-   |||
+      ![](./Media/swaggerUI-Execution.png)
+      
+1. In the **swagger UI** page, Scroll down to the **Responses** session review that it has been executed successfully by checking the code status is **200**.
 
-   ![](./Media/postman2.png)
-   
-1. If **This site is trying to open Postman.** window prompted click on **Open**.
-   ![](./Media/postman3.png)
-   
-1. If **Welcome to Postman! Tell us a bit about yourself** provide Yourname **Odluser<inject key="DeploymentID" enableCopy="false"/>**  and Select **role**, click on continue. 
-   ![](./Media/postman4.png)
+    ![](./Media/swaggerUI-Responses.png)
 
+1. Navigate back to the **Azure portal** tab, search and select **Cognitive Search**.
 
-1. On the **My Workspace** blade, click on **import** 
+    ![](./Media/cognitive-search.png)    
 
-   ![](./Media/post4.png)
+1. In **Azure AI services | Cognitive search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
-1. In **Drop anywhere to import** window, select **files** and navigate to **C:\LabFiles\miyagi\services\recommendation-service\dotnet\setup**.
+1. In **acs-<inject key="DeploymentID" enableCopy="false"/>** Search service tab, click on **Indexes** **(1)** under Search management, and review the **miyagi-embeddings** **(2)** has been created.   
 
-    ![](./Media/post5.png)
+    ![](./Media/search-service.png)
 
-1. In File explorer window Select hydate.postman_collection.json, click on **Open**.
-
-    ![](./Media/post(6).png)
- 
-1.  Under hydrate -> Select **GET 7288/datasets(1)**  and click on **Send(2)**.
-
-    ![](./Media/post7.png)
-    
-1.  You should see the following response
-    ```
-    [
-    "resources\\sample-datasets\\common-stocks-uncommon-profits.txt",
-    "resources\\sample-datasets\\intelligent-investor.txt",
-    "resources\\sample-datasets\\random-walk-down-wall-street.txt"
-    ]
-    ```
-1. Under hydrate -> select **POST save 7288/datasets(1)** -> click on **Send(2)**.
-    ![](./Media/post8.png)
-   
-1. You should see the following response
-   
-    ```
-      {
-       "dataSetName": "intelligent-investor",
-       "count": 46
-      }
-    ```
+    > **Note**: Please click on the refresh button still you view the **Document Count**.
 
 ### Task 7: Explore the recommendation service
 
-1. Get back to tab where **recommendation service** ui page displaying
-1. Click personalize button
-1. Notice financial advisor and click on personalize   
+1. Navigate back to the **recommendation service** ui page, and click on **personalize** button.
+
+    ![](./Media/service-personalize.png)
+
+1. In the **personalize** page, select your **financial advisor** from the drop-down, and click on **Personalize**.
+
+   ![](./Media/financial-advisor.png)  
+
 1. You should see the recommendations from the recommendation service in the Top Stocks widget.
 
-
-
-
+   ![](./Media/financial-advisor-output.png) 
