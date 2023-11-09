@@ -48,4 +48,102 @@
 
    ![](./Media/resources.png)
 
-1. Now, click on **Next** from the lower right corner to move to the next page.
+### Verify and Retrieve the values of Azure Resources 
+
+In this task, verification, and retrieval of specific values, including End Point, Connection String, and Key, for the designated resources.
+
+   - Azure OpenAI : **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** 
+   - Azure Cosmos DB account : **cosmos-<inject key="DeploymentID" enableCopy="false"/>**
+   - Search Service : **acs-<inject key="DeploymentID" enableCopy="false"/>**
+
+1. To obtain the deployment model names for "**deploymentOrModelId**" and "**embeddingDeploymentOrModelId**" follow the below steps:
+   
+      - In Azure Portal, click on **Resource groups** from the Navigate panel.
+
+      - From the Resource groups page, click on **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**.
+
+         ![](./Media/image-rg-1.png)
+
+      - In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, from the Overview (1) tab select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/> (2)**.
+
+        ![](./Media/image-rg-2.png)
+
+      - In the **OpenAI Overview** **(1)** page, right-click on **Go to Azure OpenAI Studio** (2) button and click on **Open link a new tab**.
+
+         ![](./Media/image-rg-03.png) 
+   
+      - In the **Azure AI Studio**, select **Deployments**, under the Management section.
+
+        ![](./Media/image-rg-6.png)
+
+      - In the **Deployments** blade of Azure AI Studio, click on **gpt-35-turbo** model name **(1)** and Copy the **deployment name** of gpt-35-turbo model **(2)** and enter copied deployment for 
+        **"deploymentOrModelId"**. Paste the values in Notepad.
+
+          ![](./Media/image-rg-7.png)
+        
+          ![](./Media/image-rg-8.png)
+
+          > **Note**: Kindly record the **gpt-35-turbo model name** in Notepad you need these values in the next tasks.
+      
+      -  Navigate back to the **Deployment** page
+
+      - In the Deployments blade of Azure AI Studio, click on **text-embedding-ada-002 model name (1)** and Copy the **deployment name** of **text-embedding-ada-002 model(2)** and enter copied deployment for 
+        **"embeddingDeploymentOrModelId"**. Paste the values in Notepad.   
+
+         ![](./Media/image-rg-10.png)
+
+         ![](./Media/image-rg-11.png)
+
+        > **Note**: Kindly record the **text-embedding-ada-002 model name** in Notepad you need these values in the next tasks.
+
+1. To obtain the values for **endpoint** and **apiKey** follow the below steps:
+
+   -  Navigate back to the tab displaying **Azure portal**. 
+
+   -  In the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Resource Management** section select **Keys and Endpoint**, copy the **KEY1** and **Endpoint** paste the values in notepad.
+
+      ![](./Media/image-rg-3.png)
+
+       > **Note**: Kindly record the **KEY1** and **Endpoint** values in Notepad you need these values in the next tasks.
+
+1. To obtain the values for  "azureCognitiveSearchEndpoint", "azureCognitiveSearchApiKey", follow below steps:
+   
+   - Navigate back to **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group.
+
+   - On the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** page, select **acs-<inject key="DeploymentID" enableCopy="false"/>** from resources list.
+
+      ![](./Media/image-rg-12.png)
+ 
+   - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade copy the URL and paste the URL to notepad.
+   
+      ![](./Media/image-rg-13.png)
+
+      >**Note**: Please record **URL** and paste in Notepad you need these values in further tasks.
+
+   - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Settings** section, copy **Primary admin Key** values and paste to **azureCognitiveSearchApiKey**. Paste the values in Notepad
+   
+      ![](./Media/image-rg-14.png)
+
+       >**Note**: Please record **Key** values in Notepad you need these values in further tasks.
+
+1. To obtain the values for "cosmosDbUri" and "cosmosDbName," please follow the steps below:
+
+   - Navigative back to resource group **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group page, select **cosmos-<inject key="DeploymentID" enableCopy="false"/>** from resources list.
+
+     ![](./Media/image-rg-15.png)
+
+   - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** copy the URL 
+      ![](./Media/image-rg-16.png)
+
+      >**Note**: Please record **URL** in Notepad you need these values in further tasks.
+
+   - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** under **Settings** select **Keys** and Copy the value of the **Cosmos DB Primary Connection String**.
+      ![](./Media/cs.png)
+
+       >**Note**: Please record **Cosmos DB Primary Connection String** in Notepad you need these values in further tasks.
+
+   1. Get back to Visual Studio and paste URL to **CosmosDBURI**, PRIMARY CONNECTION STRING to **Cosmos DB Connection String:** and  for **cosmosDbName** replace "**miyagi** with **cosmos-<inject key="DeploymentID" enableCopy="false"/>**
+
+        >**Note**: Please record **Name** values in notepad you need these values in further tasks.
+
+1. For "blobServiceUri", replace Your **blobServiceUri** with https://miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>.blob.core.windows.net/
